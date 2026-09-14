@@ -26,7 +26,7 @@ export function OraPane() {
     const booked = quote(selected.hourlyRate, draft.hours);
     return (
       <div
-        className="flex min-h-0 flex-1 flex-col justify-center gap-4 p-8"
+        className="flex min-h-0 flex-1 flex-col justify-center gap-4 p-8 animate-in fade-in duration-300"
         data-testid="booking-summary"
       >
         <p className="text-[13px] text-muted-foreground">
@@ -62,7 +62,7 @@ export function OraPane() {
           <li
             key={caregiver.id}
             data-testid={`caregiver-${caregiver.id}`}
-            className="flex items-center justify-between border-b border-border/70 py-3 text-[14px]"
+            className="flex items-center justify-between border-b border-border/70 py-3 text-[14px] transition-colors hover:bg-secondary/80"
           >
             <button type="button" className="text-left" onClick={() => select(caregiver.id)}>
               {caregiver.name} · {String(caregiver.rating)} ★
