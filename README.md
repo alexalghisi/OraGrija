@@ -5,8 +5,16 @@
 îi arată comisionul înainte să apese **Rezervă**.
 
 <p align="center">
-  <img src="docs/hero.png" alt="OraGrija — lista de îngrijitori verificați" width="920" />
+  <img
+    src="docs/cum-merge.gif"
+    alt="OraGrija — filtru, selecție, ore, rezervare (înregistrare din app)"
+    width="920"
+  />
 </p>
+
+Înregistrare din app, nu slideshow: cursorul trece pe **Cumpărături → Plimbare →
+Companii**, alege Mioara, schimbă 2h → 3h, apoi **Rezervă**. Același clip ca
+fișier: [`docs/oragrija.webm`](docs/oragrija.webm).
 
 **React 19 · TypeScript (strict) · Vite 8 · Tailwind CSS 4 · Zustand · Vitest ·
 Playwright**
@@ -17,10 +25,6 @@ Playwright**
 
 Alegi serviciul, dai click pe un îngrijitor, setezi durata, confirmi. Totalul
 apare pe loc — tarif × ore + comision.
-
-<p align="center">
-  <img src="docs/cum-merge.gif" alt="Filtrare, selecție și rezervare în OraGrija" width="720" />
-</p>
 
 1. **Găsește** — lista e deja filtrată pe oraș (Cluj-Napoca) și pe serviciu.
 2. **Selectează** — Mioara D., 45 RON/oră, 4.9. Tura implicită e 3 ore.
