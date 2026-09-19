@@ -8,15 +8,17 @@
 
 <p align="center">
   <img
-    src="docs/cum-merge.gif"
-    alt="OraGrija — filtru, selecție, ore, rezervare (înregistrare din app)"
+    src="docs/dupa-instalare.gif"
+    alt="OraGrija — fereastra după instalare: filtru, selecție, ore, Rezervă, 151 RON"
     width="920"
   />
 </p>
 
-Înregistrare din app, nu slideshow: cursorul trece pe **Cumpărături → Plimbare →
-Companii**, alege Mioara, schimbă 2h → 3h, apoi **Rezervă**. Același clip ca
-fișier: [`docs/oragrija.webm`](docs/oragrija.webm).
+După `npm install` + `npm run dev` vezi fereastra asta: filtru, selecție, ore,
+**Rezervă**, 151 RON.
+
+Înregistrare din app, cu cursor: [`docs/cum-merge.gif`](docs/cum-merge.gif) ·
+[`docs/oragrija.webm`](docs/oragrija.webm).
 
 **React 19 · TypeScript (strict) · Vite 8 · Tailwind CSS 4 · Zustand · Vitest ·
 Playwright**
