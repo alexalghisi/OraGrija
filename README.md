@@ -4,6 +4,8 @@
 2–4 ore (companie, cumpărături, plimbare, supraveghere). Platforma ia 12% și
 îi arată comisionul înainte să apese **Rezervă**.
 
+**Live:** [alexalghisi.github.io/OraGrija](https://alexalghisi.github.io/OraGrija/)
+
 <p align="center">
   <img
     src="docs/cum-merge.gif"
