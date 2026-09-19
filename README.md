@@ -23,9 +23,6 @@ După `npm install` și `npm run dev` vezi fereastra asta: filtru → îngrijito
   />
 </p>
 
-După `npm install` + `npm run dev` vezi fereastra asta: filtru, selecție, ore,
-**Rezervă**, 151 RON.
-
 Înregistrare din app, cu cursor: [`docs/cum-merge.gif`](docs/cum-merge.gif) ·
 [`docs/oragrija.webm`](docs/oragrija.webm).
 
