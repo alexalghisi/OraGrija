@@ -1,9 +1,24 @@
 import { OPENING, available, quote, validHours } from "./care";
 
 test("only verified Cluj caregivers matching the service are returned, best rating first", () => {
-  expect(available(OPENING, "companii", "Cluj-Napoca").map((c) => c.id)).toEqual(["mioara"]);
-  expect(available(OPENING, "plimbare", "Cluj-Napoca").map((c) => c.id)).toEqual(["mioara"]);
-  expect(available(OPENING, "cumparaturi", "Cluj-Napoca").map((c) => c.id)).toEqual(["vasile"]);
+  expect(available(OPENING, "companii", "Cluj-Napoca").map((c) => c.id)).toEqual([
+    "mioara",
+    "ana",
+    "ligia",
+  ]);
+  expect(available(OPENING, "plimbare", "Cluj-Napoca").map((c) => c.id)).toEqual([
+    "mioara",
+    "radu",
+  ]);
+  expect(available(OPENING, "cumparaturi", "Cluj-Napoca").map((c) => c.id)).toEqual([
+    "vasile",
+    "radu",
+    "ligia",
+  ]);
+  expect(available(OPENING, "supraveghere", "Cluj-Napoca").map((c) => c.id)).toEqual([
+    "vasile",
+    "ana",
+  ]);
 });
 
 test("shifts must stay between two and four hours", () => {

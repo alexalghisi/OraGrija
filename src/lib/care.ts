@@ -15,6 +15,7 @@ export type Caregiver = {
   hourlyRate: number;
   services: ServiceKind[];
   rating: number;
+  photo: string;
 };
 
 export type BookingDraft = {
@@ -38,6 +39,7 @@ export const OPENING: Caregiver[] = [
     hourlyRate: 45,
     services: ["companii", "plimbare"],
     rating: 4.9,
+    photo: "caregivers/mioara.jpg",
   },
   {
     id: "vasile",
@@ -47,6 +49,37 @@ export const OPENING: Caregiver[] = [
     hourlyRate: 50,
     services: ["cumparaturi", "supraveghere"],
     rating: 4.7,
+    photo: "caregivers/vasile.jpg",
+  },
+  {
+    id: "ana",
+    name: "Ana T.",
+    city: "Cluj-Napoca",
+    verified: true,
+    hourlyRate: 42,
+    services: ["companii", "supraveghere"],
+    rating: 4.6,
+    photo: "caregivers/ana.jpg",
+  },
+  {
+    id: "radu",
+    name: "Radu S.",
+    city: "Cluj-Napoca",
+    verified: true,
+    hourlyRate: 48,
+    services: ["plimbare", "cumparaturi"],
+    rating: 4.5,
+    photo: "caregivers/radu.jpg",
+  },
+  {
+    id: "ligia",
+    name: "Ligia N.",
+    city: "Cluj-Napoca",
+    verified: true,
+    hourlyRate: 40,
+    services: ["companii", "cumparaturi"],
+    rating: 4.4,
+    photo: "caregivers/ligia.jpg",
   },
   {
     id: "elena",
@@ -56,6 +89,7 @@ export const OPENING: Caregiver[] = [
     hourlyRate: 55,
     services: ["companii", "cumparaturi", "plimbare"],
     rating: 4.8,
+    photo: "caregivers/elena.jpg",
   },
   {
     id: "ion",
@@ -65,6 +99,7 @@ export const OPENING: Caregiver[] = [
     hourlyRate: 35,
     services: ["plimbare"],
     rating: 3.2,
+    photo: "caregivers/ion.jpg",
   },
 ];
 

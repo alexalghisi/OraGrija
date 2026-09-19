@@ -13,9 +13,12 @@ test("Companii shows Mioara; Cumpărături shows Vasile; select plus 3h quotes 1
 
   expect(screen.getByTestId("filter-companii")).toBeInTheDocument();
   expect(screen.getByTestId("caregiver-mioara")).toBeInTheDocument();
+  expect(screen.getByTestId("caregiver-ana")).toBeInTheDocument();
+  expect(screen.getByTestId("caregiver-ligia")).toBeInTheDocument();
 
   await user.click(screen.getByTestId("filter-cumparaturi"));
   expect(screen.getByTestId("caregiver-vasile")).toBeInTheDocument();
+  expect(screen.getByTestId("caregiver-radu")).toBeInTheDocument();
   expect(screen.queryByTestId("caregiver-mioara")).not.toBeInTheDocument();
 
   await user.click(screen.getByTestId("filter-companii"));
