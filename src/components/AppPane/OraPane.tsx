@@ -5,6 +5,10 @@ import { useOraStore } from "@/store/oraStore";
 const SERVICES: ServiceKind[] = ["companii", "cumparaturi", "plimbare", "supraveghere"];
 const HOUR_OPTIONS = [2, 3, 4];
 
+function photoUrl(photo: string): string {
+  return `${import.meta.env.BASE_URL}${photo}`;
+}
+
 export function OraPane() {
   const screen = useOraStore((state) => state.screen);
   const city = useOraStore((state) => state.city);
@@ -29,6 +33,13 @@ export function OraPane() {
         className="flex min-h-0 flex-1 flex-col justify-center gap-4 p-8 animate-in fade-in duration-300"
         data-testid="booking-summary"
       >
+        <img
+          src={photoUrl(selected.photo)}
+          alt=""
+          width={72}
+          height={72}
+          className="h-[72px] w-[72px] rounded-full object-cover"
+        />
         <p className="text-[13px] text-muted-foreground">
           {SERVICE_LABELS[draft.service]} · {String(draft.hours)} ore · {city}
         </p>
@@ -64,8 +75,26 @@ export function OraPane() {
             data-testid={`caregiver-${caregiver.id}`}
             className="flex items-center justify-between border-b border-border/70 py-3 text-[14px] transition-colors hover:bg-secondary/80"
           >
-            <button type="button" className="text-left" onClick={() => select(caregiver.id)}>
-              {caregiver.name} · {String(caregiver.rating)} ★
+            <button
+              type="button"
+              className="flex min-w-0 flex-1 items-center gap-3 text-left"
+              onClick={() => select(caregiver.id)}
+            >
+              <img
+                src={photoUrl(caregiver.photo)}
+                alt=""
+                width={40}
+                height={40}
+                className="h-10 w-10 shrink-0 rounded-full object-cover"
+              />
+              <span className="min-w-0">
+                <span className="block truncate">
+                  {caregiver.name} · {String(caregiver.rating)} ★
+                </span>
+                <span className="block truncate text-[12px] text-muted-foreground">
+                  {caregiver.services.map((kind) => SERVICE_LABELS[kind]).join(", ")}
+                </span>
+              </span>
             </button>
             <span className="text-[12px] text-muted-foreground">
               {String(caregiver.hourlyRate)} RON/oră
