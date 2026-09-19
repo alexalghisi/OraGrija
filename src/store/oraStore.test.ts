@@ -1,5 +1,14 @@
 import { useOraStore } from "./oraStore";
 
+test("setService('cumparaturi') clears selectedId", () => {
+  useOraStore.getState().reset();
+  useOraStore.getState().select("mioara");
+  expect(useOraStore.getState().selectedId).toBe("mioara");
+  useOraStore.getState().setService("cumparaturi");
+  expect(useOraStore.getState().selectedId).toBeNull();
+  useOraStore.getState().reset();
+});
+
 test("confirming a booking moves to the book screen with a draft", () => {
   useOraStore.getState().reset();
   useOraStore.getState().setService("companii");

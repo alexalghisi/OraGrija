@@ -1,5 +1,12 @@
 import { expect, test } from "@playwright/test";
 
+test("filter Cumpărături shows Vasile, not Mioara", async ({ page }) => {
+  await page.goto("/");
+  await page.getByTestId("filter-cumparaturi").click();
+  await expect(page.getByTestId("caregiver-vasile")).toBeVisible();
+  await expect(page.getByTestId("caregiver-mioara")).toHaveCount(0);
+});
+
 test("family can book a verified companion for three hours", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { name: "OraGrija" })).toBeVisible();
