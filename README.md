@@ -6,6 +6,15 @@
 
 **Live:** [alexalghisi.github.io/OraGrija](https://alexalghisi.github.io/OraGrija/)
 
+După `npm install` și `npm run dev` vezi fereastra asta: filtru → îngrijitor → ore →
+**Rezervă**.
+
+<p align="center">
+  <img src="docs/mock-gaseste.png" alt="Mock — Găsește, Companii, Mioara 45 RON/oră" width="300" />
+  <img src="docs/mock-selectat.png" alt="Mock — Mioara selectată, 3h, 151 RON" width="300" />
+  <img src="docs/mock-rezervare.png" alt="Mock — Rezervare: 151 RON total" width="300" />
+</p>
+
 <p align="center">
   <img
     src="docs/cum-merge.gif"
